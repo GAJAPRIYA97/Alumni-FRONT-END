@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Serve Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>Quick Serve Admin</h2>
+        <ul>
+            <li onclick="showSection('dashboard')">Dashboard</li>
+            <li onclick="showSection('labour')">Labour details</li>
+            <li onclick="showSection('customer')">Customer details</li>
+            <li onclick="showSection('jobs')">Job Posts</li>
+            <li onclick="showSection('adminsettings')">Admin Settings</li>
+        </ul>
+    </div>
+
+    <div class="topbar">
+        <button class="menu-btn" onclick="toggleSidebar()">Menu</button>
+        <h1>Welcome, Admin Preethi!</h1>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div id="dashboard" class="section">
+            <div class="card">Total Labour Users: 120</div>
+            <div class="card">Total Employers: 25</div>
+            <div class="card">Total Jobs Posted: 68</div>
+            <div class="card">Pending Job Approvals: 5</div>
+            <div class="card">Recently Registered Users: 10</div>
+            <div class="card">Job Category Summary: Mason: 20 | Electrician: 15 | Painter: 10</div>
+        </div>
+
+        <div id="labour" class="section" style="display: none;">
+            <h2>Labour Details</h2>
+        </div>
+
+        <div id="customer" class="section" style="display: none;">
+            <h2>Customer Details</h2>
+        </div>
+
+        <div id="jobs" class="section" style="display: none;">
+            <h2>Job Posts</h2>
+        </div>
+
+        <div id="adminsettings" class="section" style="display: none;">
+            <h2>Admin Settings</h2>
+            <form>
+                <label>Email:</label>
+                <input type="email" value="admin@quickserve.com"><br>
+
+                <label>Phone:</label>
+                <input type="text" value="+91 9876543210"><br>
+
+                <button type="submit">Update</button>
+                <button type="button" onclick="logout()">Logout</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const content = document.getElementById("mainContent");
+            sidebar.classList.toggle("active");
+            content.classList.toggle("shifted");
+        }
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(s => s.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+
+            const items = document.querySelectorAll('.sidebar ul li');
+            items.forEach(i => i.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function logout() {
+            alert("You have been logged out!");
+            window.location.href = "Adminlogin.html";
+        }
+
+        window.onload = () => showSection('dashboard');
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #fff;
+  }
+  
+  .contact-info {
+    max-width: 400px;
+  }
+  
+  .contact-info .icon {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid red;
+    display: inline-block;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  .leave-message {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .leave-message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid red;
+    display: inline-block;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #d1021c;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+  }
+  
+  footer {
+    background-color: #b70000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+  }

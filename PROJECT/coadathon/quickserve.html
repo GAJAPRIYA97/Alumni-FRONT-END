@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+<title>QuickServe</title>
+<!----css link-->
+<link rel="stylesheet" href="quickserve.css">
+<!----fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<!-----google icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1><i class="fa-solid fa-helmet-safety fa-2xl"></i> <span>QUICKSERVE</span></h1>
+    
+    <div class="navbar-links">
+      <a class="navbar-link" href="#quickserve">Home</a>
+      <a class="navbar-link" href="findjobcoadathon.html">Find Jobs</a>
+      <a class="navbar-link" href="aboutus.html">About Us</a>
+
+      <div class="button-group">
+        <a class="navbar-link" href="loginpage.html"><button>Login</button></a>
+        <a class="navbar-link" href="registrationpage.html"><button>Sign Up</button></a>
+        <a class="navbar-link" href="admin.html"><button>Admin</button></a>
+
+      </div>
+    </div>
+
+    <div class="navbar-toggle" onclick="shownavbar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+</body>
+
+</nav>
+<!----sidenavbar-->
+<div class="sidenavbar">
+<p style="text-align: right;">
+<i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
+</p>
+<div class="sidenavbarlinks">
+ <p class="sidenavbarlink"><a href="#">Home</a></p>
+<p class="sidenavbarlink"><a href="#">Find Jobs</a></p>
+<p class="sidenavbarlink"><a href="#">About Us</a></p>
+ <a href="#"><button>Login</button></a>
+<a href="#"><button>Register</button></a>
+</div>
+</div>
+<!----header----->
+<div class="header">
+<div>
+<h1>Connect With Skilled<P style="color: rgb(255, 42, 0)";> Skilled Construction</P> Workers.</h1>
+<p>Find verified workers for your Construction and civil work projects or get hired for your skills.</p>
+<a href="#"><button>Find Workers</button></a>
+<a href="jobform.html"><button>Post a Job</button></a>
+</div>
+<div>
+  <img src="main img.jpg" width="800px" height="500px">
+</div>
+</div>
+<!---search--->
+<div class="services">
+<div>
+<h1 style="color: rgb(189, 61, 15);">How QuickServe Works</h1>
+<h3> Our platform makes it easy to connect skilled workers with the right jobs through a simple,
+      streamlined process</h3>
+</div>
+</div>
+<!----search section-->
+<div class="searchbarbox">
+<div>
+<i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+<h2>Search & connect</h2><br>
+<p>Browse through verified professionals or post your job requirements to find the perfect match for your project.</p>
+ </div>
+ <div>
+<i class="fa-solid fa-thumbs-up"></i>
+<h2>Hire & work</h2><br>
+<p>Select the right professionals,discuss project details,and finalize the terms to start working together.</p>
+ </div>
+ <div>
+ <i class="fa-solid fa-face-smile"></i>
+ <h2>Complete & Review</h2><br>
+ <p>once the job is done,provide feedback to help maintain quality and trust within our community
+   which helps us to serve u better.
+ </p>
+ </div>
+ </div>
+</div>
+<!-----featured departments-------->
+<div class="department" id="categories">
+<h2>Explore worker categories</h2>
+<p>Browse through our diverse range of construction and other work professionals</p>  
+</div>
+<div class="depart">
+<div class="departbox">
+<div>
+<img src="https://media.istockphoto.com/id/622800884/photo/close-up-of-industrial-bricklayer-installing-bricks-on-construction-site.jpg?s=612x612&w=0&k=20&c=5h8_HF5wWNsBw7Pw9YoneA4KhtcPslH5iT1fiW_lJZs="   width="250px" height="250px" alt="">
+</div>
+<div>
+<img src="https://img.freepik.com/premium-photo/carpenters-hands-planing-plank-wood-with-hand-plane_93675-113463.jpg?w=1380"   width ="250px" height="250px" alt="">
+</div>
+<div>
+<img src="https://onepullwire.com/wp-content/uploads/2022/02/10-Specializations-Comm-Electricians.jpeg" width="250px" height="250px" alt="">
+</div>
+<div>
+<img src="https://media.istockphoto.com/id/1807453201/photo/handyman-repairing-bathroom-pipes.jpg?s=612x612&w=0&k=20&c=F1G6TMtod9w7Urz9BqfYH8i3CFtNS2uhkKRgJGo0frg=" width="250px" height="250px" alt="">
+</div>
+<div>
+<img src="https://paintmywalls.in/wp-content/uploads/2023/04/painter-near-me-painters-near-me-2-1024x707.jpg"  width="250px" height="250px" alt="">
+</div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmi9Wtwz-Q6u-ZBxdjrTRTFkG0Xu1givEpUhIzymJ1_xT2pJBxB1PdabZxRe1XICj__So&usqp=CAU" width="250px" height="250px" alt="">
+</div>
+<div>
+<img src="https://t4.ftcdn.net/jpg/10/85/76/43/360_F_1085764380_bYBDoPXwkv6fnANOHL76gPn75JJEHnmj.jpg" width="250px" height="250px" alt="">
+</div>
+<div>
+  <img src="https://www.shutterstock.com/image-photo/sparks-fly-when-journeyman-pipe-260nw-2225264961.jpg" width="250px" height="250px" alt="">
+</div>
+</div>
+</div>
+<!----footer section---->
+<div class="footer">
+<div class="footercontainer">
+ <h2>Contact Us</h2>
+  <p><b>Email:</b> support@quickserve.com</p><br>
+  <p><b>Phone:</b> +91 63822****</p><br>
+  <p><b>Address:</b>123,construction street,chennai-620001</p>
+  <br></div>
+    <div>
+      <h2>Quick Links</h2>
+      <p><a href="#quickserve.html">Home</a></p><BR>
+      <p><a href="#catagories">Categories</a></p><br>
+      <p><a href="loginpage.html">Login</a></p><br>
+      <p><a href="registrationpage.html">Register</a></p>
+      </div>
+<div>
+<h2>Departments</h2>
+<p><a href="#">Mason</a></p><br>
+<p><a href="#"> Carpentry</a></p><br>
+<p><a href="#">Electrical</a></p><br>
+<p><a href="#">Plumber</a></p><br>
+<p><a href="#">Interior designer</a></p>
+</div>
+</div>
+<hr>
+<footer class="footer">
+  <p>&copy; 2025 QuickServe. All rights reserved.</p>
+</footer>
+
+<script src="C:\New Folder\New folder\e-commerce\qsscript.js"></script>
+</body>
+</html>

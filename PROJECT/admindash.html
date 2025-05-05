@@ -1,0 +1,94 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="YourNamespace.dashboard" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Alumni Management Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (Optional, if you want icons inside buttons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h2 {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+        .btn-custom {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="container mt-4">
+            <h2 class="text-center mb-4">Alumni Management Dashboard</h2>
+
+            <!-- Search, Clear, Export Section -->
+            <div class="row mb-3">
+                <div class="col-md-4 mb-2">
+                    <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" Placeholder="Search by Name or Email" />
+                </div>
+                <div class="col-md-2 mb-2">
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary w-100 btn-custom" OnClick="btnSearch_Click" />
+                </div>
+                <div class="col-md-2 mb-2">
+                    <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-secondary w-100 btn-custom" OnClick="btnClear_Click" />
+                </div>
+                <div class="col-md-4 text-end">
+                    <asp:Button ID="btnExport" runat="server" Text="Export to Excel" CssClass="btn btn-success" OnClick="btnExport_Click" />
+                </div>
+            </div>
+
+            <!-- Alumni Grid -->
+            <div class="table-responsive">
+                <asp:GridView ID="gvAlumni" runat="server" 
+                    CssClass="table table-striped table-hover" 
+                    AllowPaging="True" 
+                    PageSize="5" 
+                    AllowSorting="True" 
+                    AutoGenerateColumns="False"
+                    OnPageIndexChanging="gvAlumni_PageIndexChanging"
+                    OnSorting="gvAlumni_Sorting"
+                    OnRowCommand="gvAlumni_RowCommand"
+                    DataKeyNames="AlumniID">
+                    
+                    <Columns>
+                        <asp:BoundField DataField="AlumniID" HeaderText="ID" SortExpression="AlumniID" />
+                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                        <asp:BoundField DataField="Batch" HeaderText="Batch" SortExpression="Batch" />
+                        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+
+                        <asp:TemplateField HeaderText="Actions">
+                            <ItemTemplate>
+                                <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-success btn-sm" CommandName="Approve" CommandArgument='<%# Eval("AlumniID") %>' />
+                                <asp:Button ID="btnReject" runat="server" Text="Reject" CssClass="btn btn-danger btn-sm" CommandName="Reject" CommandArgument='<%# Eval("AlumniID") %>' />
+                                <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-warning btn-sm" CommandName="Edit" CommandArgument='<%# Eval("AlumniID") %>' />
+                                <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-outline-danger btn-sm" CommandName="Delete" CommandArgument='<%# Eval("AlumniID") %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                    </Columns>
+                </asp:GridView>
+            </div>
+
+        </div>
+
+    </form>
+
+    <!-- Bootstrap JS (Optional if you use Bootstrap modals, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert2 (for success/error popups if you want) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Posting Page</title>
+    <link rel="stylesheet" href="jobs.css">
+    <script src="https://kit.fontawesome.com/33f1b1a165.js" crossorigin="anonymous">
+    </script>
+    
+</head>
+<body>
+    <div class="homelinks">
+        <img src="https://img.jagranjosh.com/images/2023/August/3182023/dxownload.jpeg" alt="Holy Cross College logo">
+
+        
+                
+       <ul>
+        <div class="dropdown">
+            <li><a href="frontpage.html">Home</a></li>
+            <div class="dropdown-content">
+            <a href="#frontpage.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact Us</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="seminar.html">Seminar</a>
+            <a href="alumnidonation.html">Alumni Donation</a>
+        </div>
+</div>
+        <li><a href="frontpage.html">About</a></li>
+        <li><a href="frontpage.html">Contact Us</a></li>
+        
+    </ul>
+
+</div>
+
+
+
+
+    <div class="container">
+        <div id="postedJobs">
+            <h1>Posted Jobs</h1>
+            <ul id="jobList"></ul>
+        </div>
+        
+        <div class="form-container">
+            <h2>Post a New Job</h2>
+            <form id="jobForm">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" required><br>
+
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" name="company" required><br>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br>
+
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="jobDescription" required></textarea><br>
+
+                <button type="submit">Post Job</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('jobForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent form submission and page refresh
+    
+        // Retrieve values from form fields
+        const jobTitle = document.getElementById('jobTitle').value;
+        const company = document.getElementById('company').value;
+        const location = document.getElementById('location').value;
+        const jobDescription = document.getElementById('jobDescription').value;
+    
+        // Get the current date and time
+        const currentDate = new Date();
+        const postTime = currentDate.toLocaleString();  // This will format it in a readable way (e.g., "4/2/2025, 10:15:32 AM")
+    
+        // Create a new list item for the posted job
+        const jobList = document.getElementById('jobList');
+        const newJob = document.createElement('li');
+    
+        // Populate the list item with the job details and post time
+        newJob.innerHTML = `
+            <b>Job Title:</b> ${jobTitle} <br>
+            <b>Company:</b> ${company} <br>
+            <b>Location:</b> ${location} <br>
+            <b>Job Description:</b> ${jobDescription} <br>
+            <b>Posted on:</b> ${postTime} <br>
+        `;
+    
+        // Append the new job post to the list
+        jobList.appendChild(newJob);
+    
+        // Clear the form fields after posting
+        document.getElementById('jobForm').reset();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+  
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color:  #d75a1b;
+    color: #333;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(124, 122, 122);
+    border-radius: 20px;
+    background-color: rgb(32, 145, 226);
+  }
+  
+  /* Login Button */
+  .login-btn {
+    float: right;
+    background-color: #d75a1b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #0b1f32;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 8px;
+  }
+  
+  .logo h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  /* Navigation */
+  .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav a:hover {
+    color: #041426;
+  }
+  
+  /* Quote Box */
+  .quote-box {
+    background-color: #fff;
+    border-left: 6px solid #4a90e2;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .quote-box p {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #444;
+  }
+  
+  /* Image Section */
+  .image-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav {
+      margin-top: 15px;
+    }
+  
+    .nav a {
+      margin: 0 10px 10px 0;
+      display: inline-block;
+    }
+  
+    .login-btn {
+      float: none;
+      margin: 10px 0;
+    }
+  }
+  

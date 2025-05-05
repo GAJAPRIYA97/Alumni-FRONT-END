@@ -1,0 +1,186 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.freepik.com/premium-photo/job-search-illustration-background-template_503956-1501.jpg");
+    justify-content: space-between; 
+    height: 100vh; 
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%; 
+}
+
+#postedJobs {
+    flex-grow: 1; 
+    margin-left: 20px; 
+    overflow-y: auto; 
+    padding-right: 20px; 
+}
+
+.form-container {
+    position: sticky; 
+    top: 20px;
+    width: 300px; 
+    height: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 400px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#jobList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#jobList li {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#jobList li b {
+    display: block;
+    margin-bottom: 5px;
+}
+.homelinks{
+    display:flex;
+ background-color: rgb(230, 230, 241);
+    height: 10%;
+    position: sticky;
+    
+    }
+.homelinks img{
+    width: 75px;
+    height: 75px;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu when hovering over the dropdown container */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.homelinks ul li{
+    display: inline;
+    
+    text-align:right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-right: 10px;
+    
+    
+    }
+    .homelinks ul li a{
+        color: blue;
+        text-decoration: none;
+        font-size: 20px;
+ }
+ .homelinks ul li a:hover{
+ color:rgb(155, 26, 26);}
+
+
+ .homelinks ul li a:active{
+    color: rgb(47, 178, 210);
+    transition: 0.3s;}
+    
+.homelinks label
+{
+    color:blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    padding-top: 15px;
+}
+.homelinks input{
+    width: 200px;
+    height: 30px;
+    padding-top:15px ;
+    margin-top: 12px;
+}

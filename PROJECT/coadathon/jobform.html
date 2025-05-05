@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Form</title>
+  <link rel="stylesheet" href="jobform.css">
+</head>
+<body>
+
+  <div class="job-form-container">
+    <h2>Post a Job</h2>
+<form>
+      
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Building Contractors & workers, Plumber" required />
+      
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="City or Area" required />
+      
+      <label for="jobType">Job Type</label>
+      <select id="jobType" name="jobType" required>
+        <option value="">-- Select --</option>
+        <option value="Household">Household</option>
+        <option value="Commercial">Commercial</option>
+      </select>
+      
+      <label for="description">Job Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="Describe your needs..."></textarea>
+      
+      <label for="contact">Contact Email / Phone</label>
+      <input type="text" id="contact" name="contact" placeholder="example@email.com / 8428727421" required />
+
+      <label for="postDate">Post Date & Time</label>
+      <input type="text" id="postDate" name="postDate" readonly />
+
+      <button type="submit" class="submit-btn">Post Job</button>
+    </form>
+  </div>
+  <script>
+    // Fill job title if category is passed in URL
+    const urlParams = new URLSearchParams(postMessage);
+    const category = urlParams.get('category');
+    if (category) {
+      const input = document.getElementById('jobTitle');
+      input.value = category
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, char => char.toUpperCase());
+    }
+
+    // Auto-fill current date and time
+    const now = new Date();
+    const formattedDate = now.toLocaleString(); // e.g., "4/30/2025, 2:45:23 PM"
+    document.getElementById('postDate').value = formattedDate;
+  </script>
+  
+
+</body>
+</html>

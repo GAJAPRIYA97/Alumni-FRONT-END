@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registrationpage.css"> 
+</head>
+    <body>
+        <div class="container">
+          <div class="createlines">
+             <center>
+                   <h1>Create your account</h1>
+                   <p>Already create an account?<a href="Q_S_LogIn.html">Sign In</a></p>
+              </center>
+           </div>
+
+           <div class="boxcontainer">
+            <form id="signupForm">
+        
+              <label for="role">
+                I want to
+               </label>
+               <select id="role" required>
+                 <option value="Worker">Find Work (I'm a worker)</option>
+                 <option value="Customer">Hire workers(I'm customer)</option>
+               </select>
+
+               <label>Full Name</label> 
+               <input type="text" placeholder="Full Name" required>
+               
+                <label>Email Address</label> 
+                <input type="email" placeholder="Email Address">
+            
+                 <label>Phone Number</label>
+                 <input type="tel" placeholder="Phone Number" required/>
+            
+                <label>Password</label>
+                <input type="password" placeholder="Password" required/>
+            
+                <label>Confirm Password</label>
+                <input type = "password" placeholder="Confirm Password" required/>
+            <br>
+            
+                  <div class="CheckBox">
+                      <p>
+                         <input type="checkbox" id="agree">
+                         <label for="agree">I agree to the <a href="#">Terms and Condition </a> and <a href="#">Privacy Policy</a></label>
+                      </p>  
+                   </div>
+            <br>
+
+               <button type="submit">Create account</button>
+            
+            </form>
+            </div>
+        </div>
+    </body>
+ </html>
